@@ -45,6 +45,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         MyListRenewal();
     }
 
+    // Lobby Panel페이지 할당.
     void MyListRenewal()
     {
         // 최대페이지
@@ -64,6 +65,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
+    // 실시간 Lobby 화면 동기화.
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         int roomCount = roomList.Count;
@@ -82,7 +84,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
 
     #region 서버연결
-    void Awake() => Screen.SetResolution(960, 540, false);
+    void Awake() => Screen.SetResolution(1080, 1920, false);
 
     void Update()
     {
